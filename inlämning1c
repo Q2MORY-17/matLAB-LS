@@ -1,0 +1,12 @@
+%inlämning1c (förslag)
+t=0:0.01:81.92;
+H=tf([1 10.1 1],[1 2 10 9]);
+for omega=1:2:5;
+x=sin(omega*t);
+lsim(H,x,t);
+hold on
+end
+xlim([6 16]);
+ylim([-4 4])
+legend('H','1','5');
+grid on;
